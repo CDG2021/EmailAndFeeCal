@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxhomeworkparta.FXMLDocumentController">
+   <children>
+      <Label fx:id="totalCostLabel" layoutX="25.0" layoutY="328.0" text="Total Cost:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="clearButton" layoutX="444.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonPressed" text="Clear All">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="total" layoutX="320.0" layoutY="306.0" mnemonicParsing="false" onAction="#computeTotal" text="Compute Cost">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label fx:id="paymentChoosen" layoutX="26.0" layoutY="347.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <VBox layoutX="290.0" layoutY="21.0" prefHeight="98.0" prefWidth="235.0" spacing="5.0">
+         <children>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Select a Meal Plan">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="mealPlan1Radio" mnemonicParsing="false" prefHeight="21.0" prefWidth="235.0" text="7 meals per week: $600">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mealGroup" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mealPlan2Radio" mnemonicParsing="false" prefHeight="21.0" prefWidth="238.0" text="14 meals per week: $1,100" toggleGroup="$mealGroup">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="mealPlan3Radio" mnemonicParsing="false" prefHeight="21.0" prefWidth="236.0" text="Unlimited meals: $1,800" toggleGroup="$mealGroup">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="290.0" layoutY="144.0" prefHeight="113.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Payment Type">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="cashPayment" mnemonicParsing="false" prefHeight="21.0" prefWidth="143.0" text="by Cash">
+               <toggleGroup>
+                  <ToggleGroup fx:id="paymentGroup" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="checkPayment" mnemonicParsing="false" prefHeight="21.0" prefWidth="148.0" text="by Check" toggleGroup="$paymentGroup">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="creditCardPayment" mnemonicParsing="false" prefHeight="21.0" prefWidth="160.0" text="by Credit Card" toggleGroup="$paymentGroup">
+               <font>
+                  <Font size="15.0" />
+               </font></RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="25.0" layoutY="21.0" prefHeight="86.0" prefWidth="243.0" spacing="5.0">
+         <children>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Select a Dorm (e.g. Allen Hall)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="combo" onAction="#Select" prefHeight="32.0" prefWidth="242.0" promptText="Click to select a dorm" />
+         </children>
+      </VBox>
+      <VBox layoutX="25.0" layoutY="128.0" prefHeight="124.0" prefWidth="260.0" spacing="5.0">
+         <children>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Select some option(s)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="option1" mnemonicParsing="false" text="Use laundry room: $80">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox fx:id="option2" mnemonicParsing="false" text="Use paid-parking areas: $90">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox fx:id="option3" mnemonicParsing="false" text="Use SE school buses: $100">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+         </children>
+      </VBox>
+      <CheckBox fx:id="emailCheck" layoutX="26.0" layoutY="257.0" mnemonicParsing="false" text="Email my order">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="emailField" layoutX="26.0" layoutY="294.0" prefHeight="25.0" prefWidth="228.0" promptText="Your Email address here" />
+      <Button fx:id="placeOrder" layoutX="318.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Place Order" />
+      <Label fx:id="emailSend" layoutX="26.0" layoutY="368.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
